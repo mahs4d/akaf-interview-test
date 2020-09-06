@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "f0140057-0083-4728-a815-91a60ab93d42",
+		"name": "Akaf",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Car",
+			"item": [
+				{
+					"name": "createCar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"c1\",\n    \"carNumber\": \"f1\",\n    \"brand\": \"peugeut\",\n    \"model\": \"206\",\n    \"productionYear\": 1389,\n    \"color\": \"white\",\n    \"serviceTypes\": [\"s1\", \"s2\"],\n    \"seatsCount\": 4,\n    \"luggageCapacity\": 2,\n    \"status\": \"active\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cars",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listCars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cars?page=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cars"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCarById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cars/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cars",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5f54d660370e18751b19f34f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeCarById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cars/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cars",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5f54d0425ddb5f6cfe5b1564"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCarById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"carNumber\": \"changedcode\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cars/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cars",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5f54d0425ddb5f6cfe5b1564"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2526730b-53eb-4408-844d-42aeb3fecd72",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e0b2f167-7b46-45cc-8176-6fee6d07362b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "7e79f1d5-141f-4663-b7e8-677a9f464d96",
+			"key": "url",
+			"value": "http://localhost:3000"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
