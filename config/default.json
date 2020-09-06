@@ -1,0 +1,25 @@
+{
+    "debug": true,
+    "logger": {
+        "level": "debug",
+        "colorize": true
+    },
+    "api": {
+        "host": "0.0.0.0",
+        "port": 3000
+    },
+    "database": {
+        "mongodb": {
+            "host": "localhost",
+            "port": 27017,
+            "username": "",
+            "password": "",
+            "dbName": "akaf-interview-test"
+        }
+    },
+    "app": {
+        "pagination": {
+            "pageSize": 20
+        }
+    }
+}
