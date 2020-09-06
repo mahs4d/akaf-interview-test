@@ -11,7 +11,7 @@ const carCreationSchema = Joi.object({
     serviceTypes: Joi.array().items(Joi.string()).required(),
     seatsCount: Joi.number().integer().positive().required(),
     luggageCapacity: Joi.number().integer().positive().required(),
-    status: Joi.string().valid('active', 'deactive').required(),
+    status: Joi.string().valid('active', 'inactive').required(),
 });
 
 const carUpdateSchema = Joi.object({
@@ -24,7 +24,7 @@ const carUpdateSchema = Joi.object({
     serviceTypes: Joi.array().items(Joi.string()).optional(),
     seatsCount: Joi.number().integer().positive().optional(),
     luggageCapacity: Joi.number().integer().positive().optional(),
-    status: Joi.string().valid('active', 'deactive').optional(),
+    status: Joi.string().valid('active', 'inactive').optional(),
 });
 
 class CarValidator {

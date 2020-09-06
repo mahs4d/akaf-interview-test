@@ -50,7 +50,7 @@ const schema = new Mongoose.Schema(
 
         status: {
             type: Mongoose.Schema.Types.String,
-            enum: ['active', 'deactive'],
+            enum: ['active', 'inactive'],
             required: true,
         },
     },
